@@ -19,7 +19,7 @@
 
 
     async function fetchData(page) {
-        let response = await fetch("https://theofficeapi.dev/api/episodes?page="+page);
+        let response = await fetch("https://theofficeapi.dev/api/episodes?limit=12&page="+page);
         let data = await response.json();
         episodeData.value=[];
         totalPages.value=data.meta.pageCount;
