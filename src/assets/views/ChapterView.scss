@@ -1,0 +1,23 @@
+#chapter-view{
+    .chapter-info{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        .chapter-info-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .chapter-info-item{
+                width: 20vw;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                p{
+                    color: aliceblue;
+                    font-size: large;
+                }
+            }
+        }
+    }
+    
+}

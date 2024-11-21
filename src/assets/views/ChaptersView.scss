@@ -1,0 +1,22 @@
+.page-container{
+    #chapters-view{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        .chapters-title{
+        position: fixed;
+        color: aliceblue;
+        left: 0;
+        top: 10%;
+        padding: 10px;
+        padding-left: 5%;
+        width: 100%;
+        }
+        .pagination-container{
+            margin-left: 33%;
+            span{
+                color: $subColor;
+            }
+        }
+    }
+}

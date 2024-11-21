@@ -1,0 +1,14 @@
+.page-container{
+    #characters-view{
+        .characters-title{
+        position: fixed;
+        color: aliceblue;
+        left: 0;
+        top: 10%;
+        padding: 10px;
+        padding-left: 5%;
+        width: 100%;
+        background-color: $mainColor;
+        }
+    }
+}
