@@ -66,23 +66,7 @@
             console.log("end");
         }
     }
-    // async function fetchCharactersEpisodes(pageId) {
-    //     let response = await fetch("https://theofficeapi.dev/api/characters?page="+pageId+"&includeEpisodes=true");
-    //     let data = await response.json();
-    //     data.results.forEach((character) => {
-    //         character.episodes.forEach((ep) => {
-    //             if (ep.episode.id==idChapter) {
-    //                 cast.value.push({
-    //                     id: character.id,
-    //                     name: character.name
-    //                 });
-    //             }
-    //         });
-    //     });
-    //     if(data.meta.currentPage!=data.meta.pageCount){
-    //         return fetchCharactersEpisodes(data.meta.nextPage);
-    //     }
-    // }
+    
     onBeforeMount ( async() => {
         fetchInfo();
         
