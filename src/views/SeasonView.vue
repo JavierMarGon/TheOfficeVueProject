@@ -1,10 +1,26 @@
 <template>
-
-    <listItems endpoint="chapter" :items="chaptersData"/>
-    <div class="pagination-container">
-        <button @click="previousPage" :disabled="currentPage <= 1">Previous</button>
-        <span>Page {{ currentPage }} of {{ totalPages }}</span>
-        <button @click="nextPage" :disabled="currentPage >= totalPages">Next</button>
+    <div>
+        <div class="season-info">
+            <div class="season-info-container">
+                <div class="season-info-item">
+                    <p>{{ seasonsData.number }}</p>
+                </div>
+                <div class="season-info-item">
+                    <p>Season Release Date:</p>
+                    <p>{{ seasonsData.startDate }}</p>
+                </div>
+                <div class="season-info-item">
+                    <p>End Season:</p>
+                    <p>{{ seasonsData.endDate }}</p>
+                </div>
+            </div>
+        </div>
+        <listItems endpoint="chapter" :items="chaptersData"/>
+        <div class="pagination-container">
+            <button @click="previousPage" :disabled="currentPage <= 1">Previous</button>
+            <span>Page {{ currentPage }} of {{ totalPages }}</span>
+            <button @click="nextPage" :disabled="currentPage >= totalPages">Next</button>
+        </div>
     </div>
 </template>
 <script setup>
