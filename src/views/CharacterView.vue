@@ -1,78 +1,123 @@
 <template>
-    <div id="character-view">
-        <h1 class="character-view-title">{{ characterData.name }}</h1>
-        <div class="character-info">
-            <div class="character-info-data">
-            <div class="character-info-data-item-container">
-                <p>Gender: </p>
-                <p class="character-info-data-item">{{ characterData.gender }}</p>
-            </div>
-            <div class="character-info-data-item-container">
-                <p>Married: </p>
-                <p class="character-info-data-item">{{ characterData.marital }}</p>
-            </div>
-            <div class="character-info-data-item-container">
-                <p>Jobs: </p>
-                <div class="item">
-                    <div  v-for="(job, index) in characterData.job" :key="index">
-                        <p>{{ job }}</p>
-                    </div>
+  <div class="container mt-5">
+    <h1 class="mb-4" style="color: #aaaaaa;">{{ characterData.name }}</h1>
+
+    <div class="row">
+      <div class="col-md-8 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Character Information</h5>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <div class="card h-100">
+                  <img :src="getImageUrl(characterImage)" :alt="characterData.name" class="card-img-top img-fluid"
+                    style="width: 100%; height: auto;">
                 </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <p>Gender:</p>
+                <p class="card-text">{{ characterData.gender }}</p>
+              </div>
+              <div class="col-md-6 mb-3">
+                <p>Married:</p>
+                <p class="card-text">{{ characterData.marital }}</p>
+              </div>
             </div>
-            <div class="character-info-data-item-container">
-                <p>Workplaces: </p>
-                <div class="item">
-                    <div  v-for="(workplace, index) in characterData.workplace" :key="index">
-                        <p>{{ workplace }}</p>
-                    </div>
-                </div>
+
+            <div class="mb-3">
+              <h6 class="card-subtitle">Jobs:</h6>
+              <ul class="list-group">
+                <li v-for="(job, index) in characterData.job" :key="index" class="list-group-item">
+                  {{ job }}
+                </li>
+              </ul>
             </div>
-            <div class="character-info-data-item-container">
-                <p>First Appearance: </p>
-                <p class="character-info-data-item">{{ characterData.firstAppearance }}</p>
+
+            <div class="mb-3">
+              <h6 class="card-subtitle">Workplaces:</h6>
+              <ul class="list-group">
+                <li v-for="(workplace, index) in characterData.workplace" :key="index" class="list-group-item">
+                  {{ workplace }}
+                </li>
+              </ul>
             </div>
-            <div class="character-info-data-item-container">
-                <p>Last Appearance: </p>
-                <p class="character-info-data-item">{{ characterData.lastAppearance }}</p>
+
+            <div class="mb-3">
+              <p>First Appearance:</p>
+              <p class="card-text">{{ characterData.firstAppearance }}</p>
             </div>
-            <div class="character-info-data-item-container">
-                <p>Actor: </p>
-                <p class="character-info-data-item">{{ characterData.actor }}</p>
+
+            <div class="mb-3">
+              <p>Last Appearance:</p>
+              <p class="card-text">{{ characterData.lastAppearance }}</p>
             </div>
+
+            <div class="mb-3">
+              <p>Actor:</p>
+              <p class="card-text">{{ characterData.actor }}</p>
             </div>
+          </div>
         </div>
-        <h1 class="character-episode-header">List of episodes with {{ characterData.name }}</h1>
-        <listItems endpoint="chapter" :items="episodesData"/>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card-container" style="height: 550px; overflow-y: auto;">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Episodes</h5>
+              <listItems endpoint="chapter" :items="episodesData" />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </template>
 <script setup>
-    import{ref,onBeforeMount,onMounted} from 'vue';
-    import listItems from '../components/itemListComponent.vue'; 
-    import { useRoute } from 'vue-router';
-    const route = useRoute();
-    const idCharacter = route.params.id;
-    let characterData= ref([]);
-    let episodesData=ref([]);
-    async function fetchData() {
-        let response = await fetch("https://theofficeapi.dev/api/character/"+idCharacter);
-        let data = await response.json();
-        characterData.value=data;
-        
+import { ref, onBeforeMount, onMounted } from 'vue';
+import listItems from '../components/itemListComponent.vue';
+import { useRoute } from 'vue-router';
+import imgSource from '../assets/imgSourceIndex.json';
+const route = useRoute();
+const idCharacter = route.params.id;
+let characterData = ref([]);
+let characterImage;
+let episodesData = ref([]);
+
+function fetchImg(id) {
+  imgSource.results.forEach((character) => {
+    if (character.id == id) {
+      characterImage = character.img;
     }
-    async function fetchEpisodeData() {
-        let response = await fetch("https://theofficeapi.dev/api/character/"+idCharacter+"?includeEpisodes=true");
-        let data = await response.json();
-        data.episodes.forEach((ep) => {
-            episodesData.value.push({
-                id: ep.episode.id,
-                name: ep.episode.title
-            });
-        });
-    }
-    onBeforeMount ( async() => {
-        fetchData();
+  });
+}
+async function fetchData() {
+  let response = await fetch("https://theofficeapi.dev/api/character/" + idCharacter);
+  let data = await response.json();
+  characterData.value = data;
+
+}
+async function fetchEpisodeData() {
+  let response = await fetch("https://theofficeapi.dev/api/character/" + idCharacter + "?includeEpisodes=true");
+  let data = await response.json();
+  data.episodes.forEach((ep) => {
+    episodesData.value.push({
+      id: ep.episode.id,
+      name: ep.episode.title
     });
-    onMounted(async () => {
-        fetchEpisodeData();
-    })
+  });
+}
+const getImageUrl = (imageName) => {
+  return new URL(`../assets/images/${imageName}`, import.meta.url).href;
+};
+
+onBeforeMount(async () => {
+  fetchData();
+});
+onMounted(async () => {
+  fetchEpisodeData();
+  fetchImg(idCharacter);
+  console.log(characterImage);
+})
 </script>

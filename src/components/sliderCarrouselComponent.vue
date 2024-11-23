@@ -6,9 +6,12 @@
         <div class="splide-wrapper">
             <Splide id="thumbnail-carousel" :options="{pagination:false, perPage:5,padding:'5%',gap:'1rem' }" aria-label="Thumbnail Carousel">
                 <SplideSlide v-for="(character) in characters">
-                    <div class="item-container">
-                        <RouterLink :to="{ name: endpoint, params: { id: character.id }}"><p>{{ character.name }}</p></RouterLink>
+                    <div class="img-container">
+                        <RouterLink :to="{ name: endpoint, params: { id: character.id }}">
+                            <img width="100%" :src="getImageUrl(character.image)" :alt="character.name"/>
+                        </RouterLink>
                     </div>
+                    <p>{{ character.name }}</p>
                 </SplideSlide>
             </Splide>
         </div>
@@ -26,6 +29,8 @@
             default: () => []
         }
     })
-        
+    const getImageUrl = (imageName) => {
+        return new URL(`../assets/images/${imageName}`, import.meta.url).href;
+    };
 
 </script>

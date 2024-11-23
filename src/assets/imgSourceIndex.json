@@ -1,0 +1,336 @@
+{
+    "results": [
+        {
+            "id": 1,
+            "img": "character1.jpg"
+        },
+        {
+            "id": 2,
+            "img": "character2.jpg"
+        },
+        {
+            "id": 3,
+            "img": "character3.jpg"
+        },
+        {
+            "id": 4,
+            "img": "character4.jpg"
+        },
+        {
+            "id": 5,
+            "img": "character5.jpg"
+        },
+        {
+            "id": 6,
+            "img": "character6.png"
+        },
+        {
+            "id": 7,
+            "img": "character7.png"
+        },
+        {
+            "id": 8,
+            "img": "character8.jpg"
+        },
+        {
+            "id": 9,
+            "img": "character9.jpg"
+        },
+        {
+            "id": 10,
+            "img": "character10.jpg"
+        },
+        {
+            "id": 11,
+            "img": "character11.jpg"
+        },
+        {
+            "id": 12,
+            "img": "character12.jpg"
+        },
+        {
+            "id": 13,
+            "img": "character13.jpg"
+        },
+        {
+            "id": 14,
+            "img": "character14.png"
+        },
+        {
+            "id": 15,
+            "img": "character15.jpg"
+        },
+        {
+            "id": 16,
+            "img": "character16.jpg"
+        },
+        {
+            "id": 17,
+            "img": "character17.jpg"
+        },
+        {
+            "id": 18,
+            "img": "character18.jpg"
+        },
+        {
+            "id": 19,
+            "img": "character19.jpg"
+        },
+        {
+            "id": 20,
+            "img": "character20.jpg"
+        },
+        {
+            "id": 21,
+            "img": "character21.jpg"
+        },
+        {
+            "id": 22,
+            "img": "character22.jpg"
+        },
+        {
+            "id": 23,
+            "img": "character23.jpg"
+        },
+        {
+            "id": 24,
+            "img": "character24.jpg"
+        },
+        {
+            "id": 25,
+            "img": "character25.jpg"
+        },
+        {
+            "id": 26,
+            "img": "character26.jpg"
+        },
+        {
+            "id": 27,
+            "img": "character27.jpg"
+        },
+        {
+            "id": 28,
+            "img": "character28.png"
+        },
+        {
+            "id": 29,
+            "img": "character29.jpg"
+        },
+        {
+            "id": 30,
+            "img": "character30.jpg"
+        },
+        {
+            "id": 31,
+            "img": "character31.jpg"
+        },
+        {
+            "id": 32,
+            "img": "character32.jpg"
+        },
+        {
+            "id": 33,
+            "img": "character33.jpg"
+        },
+        {
+            "id": 34,
+            "img": "character34.png"
+        },
+        {
+            "id": 35,
+            "img": "character35.jpg"
+        },
+        {
+            "id": 36,
+            "img": "character36.jpg"
+        },
+        {
+            "id": 37,
+            "img": "character37.jpg"
+        },
+        {
+            "id": 38,
+            "img": "character38.jpg"
+        },
+        {
+            "id": 39,
+            "img": "character39.png"
+        },
+        {
+            "id": 40,
+            "img": "character40.jpg"
+        },
+        {
+            "id": 41,
+            "img": "character41.png"
+        },
+        {
+            "id": 42,
+            "img": "character42.jpg"
+        },
+        {
+            "id": 43,
+            "img": "character43.jpg"
+        },
+        {
+            "id": 44,
+            "img": "character44.jpg"
+        },
+        {
+            "id": 45,
+            "img": "character45.jpg"
+        },
+        {
+            "id": 46,
+            "img": "character46.jpg"
+        },
+        {
+            "id": 47,
+            "img": "character47.png"
+        },
+        {
+            "id": 48,
+            "img": "character48.jpg"
+        },
+        {
+            "id": 49,
+            "img": "character49.png"
+        },
+        {
+            "id": 50,
+            "img": "character50.jpg"
+        },
+        {
+            "id": 51,
+            "img": "character51.jpg"
+        },
+        {
+            "id": 52,
+            "img": "character52.jpg"
+        },
+        {
+            "id": 53,
+            "img": "character53.jpg"
+        },
+        {
+            "id": 54,
+            "img": "character54.jpg"
+        },
+        {
+            "id": 55,
+            "img": "character55.png"
+        },
+        {
+            "id": 56,
+            "img": "character56.jpg"
+        },
+        {
+            "id": 57,
+            "img": "character57.jpg"
+        },
+        {
+            "id": 58,
+            "img": "character58.png"
+        },
+        {
+            "id": 59,
+            "img": "character59.jpg"
+        },
+        {
+            "id": 60,
+            "img": "character60.jpg"
+        },
+        {
+            "id": 61,
+            "img": "character61.jpg"
+        },
+        {
+            "id": 62,
+            "img": "character62.jpg"
+        },
+        {
+            "id": 63,
+            "img": "character63.jpg"
+        },
+        {
+            "id": 64,
+            "img": "character64.jpg"
+        },
+        {
+            "id": 65,
+            "img": "character65.jpg"
+        },
+        {
+            "id": 66,
+            "img": "character66.jpg"
+        },
+        {
+            "id": 67,
+            "img": "character67.jpg"
+        },
+        {
+            "id": 68,
+            "img": "character68.png"
+        },
+        {
+            "id": 69,
+            "img": "character69.jpg"
+        },
+        {
+            "id": 70,
+            "img": "character70.jpg"
+        },
+        {
+            "id": 71,
+            "img": "character71.jpg"
+        },
+        {
+            "id": 72,
+            "img": "character72.png"
+        },
+        {
+            "id": 73,
+            "img": "character73.jpg"
+        },
+        {
+            "id": 74,
+            "img": "character74.png"
+        },
+        {
+            "id": 75,
+            "img": "character75.jpg"
+        },
+        {
+            "id": 76,
+            "img": "character76.jpg"
+        },
+        {
+            "id": 77,
+            "img": "character77.jpg"
+        },
+        {
+            "id": 78,
+            "img": "character78.jpg"
+        },
+        {
+            "id": 79,
+            "img": "character79.jpg"
+        },
+        {
+            "id": 80,
+            "img": "character80.jpg"
+        },
+        {
+            "id": 81,
+            "img": "character81.jpg"
+        },
+        {
+            "id": 82,
+            "img": "character82.png"
+        },
+        {
+            "id": 83,
+            "img": "character83.jpg"
+        }
+    ]
+}

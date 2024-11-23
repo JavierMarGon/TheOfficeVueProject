@@ -13,6 +13,7 @@
             font-size: 15px;
             margin-bottom: 30px;
             margin-top: 0;
+            overflow: auto;
         }
     }
     .splide__list{
@@ -20,22 +21,26 @@
         margin-right: 2vw;
     }
     .splide__slide {
-        .item-container{
+        .img-container{
             border-radius: 5%;
+            height: 50%;
             overflow: hidden;
+            
+        }
+        img {
             transition: all .3s;
             cursor: pointer;
             &:hover{
                 transform: scale(1.2);
             }
-            p { 
-                margin-left: 5%;
-                margin-right: 5%;
-                font-size: 20px;
-                color: #ffffff;
-            }
         }
-        
+        p { 
+            margin-left: 5%;
+            margin-right: 5%;
+            
+            color: #242424;
+            overflow: hidden;
+        }
     }
     .title{
         margin-top: 0;
@@ -45,7 +50,7 @@
         flex-direction: row;
         justify-content: space-between;
         h5{
-            color: aliceblue;
+            color: $headerColor;
             font-size: 30px;
             margin-bottom: 25px;
             font-weight: 500;

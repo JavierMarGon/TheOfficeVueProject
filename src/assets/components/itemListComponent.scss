@@ -1,24 +1,11 @@
-#itemListComponent{
+.item{
     display: flex;
-    margin-top: 5%;
-    margin-left:5% ;
-    padding-bottom: 15px;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 50px 20px;
-    width: 40%;
-    .item{
-        margin-left: 10px;
-        margin-right: 10px;
-        padding-left: 10px;
-        padding-right: 10px;
-        width: 10vw;
-        height: 10vh;
-        background-color: $subColor;
-        border-radius: 10%;
-        align-content: center;
-        p{
-            color: #000000;
-        }
+    gap: 10%;
+    background-color: $headerColor;
+    border-radius: 10%;
+    align-content: center;
+    width: 20%;
+    p{
+        color: #aaaaaa;
     }
 }
