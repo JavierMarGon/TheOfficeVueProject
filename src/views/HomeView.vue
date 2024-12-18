@@ -1,5 +1,5 @@
 <template>
-    <img class="background-image" src="../assets/wallpaper.jpg"/>
+    <img class="img-fluid" src="../assets/wallpaper.jpg"/>
 </template>
 <script>
 </script>

@@ -18,10 +18,18 @@
               <div class="col-md-6 mb-3">
                 <p>Gender:</p>
                 <p class="card-text">{{ characterData.gender }}</p>
-              </div>
-              <div class="col-md-6 mb-3">
+              
                 <p>Married:</p>
                 <p class="card-text">{{ characterData.marital }}</p>
+
+                <p>First Appearance:</p>
+                <p class="card-text">{{ characterData.firstAppearance }}</p>
+
+                <p>Last Appearance:</p>
+                <p class="card-text">{{ characterData.lastAppearance }}</p>
+
+                <p>Actor:</p>
+                <p class="card-text">{{ characterData.actor }}</p>
               </div>
             </div>
 
@@ -41,21 +49,6 @@
                   {{ workplace }}
                 </li>
               </ul>
-            </div>
-
-            <div class="mb-3">
-              <p>First Appearance:</p>
-              <p class="card-text">{{ characterData.firstAppearance }}</p>
-            </div>
-
-            <div class="mb-3">
-              <p>Last Appearance:</p>
-              <p class="card-text">{{ characterData.lastAppearance }}</p>
-            </div>
-
-            <div class="mb-3">
-              <p>Actor:</p>
-              <p class="card-text">{{ characterData.actor }}</p>
             </div>
           </div>
         </div>
